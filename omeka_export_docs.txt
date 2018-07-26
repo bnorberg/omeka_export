@@ -1,0 +1,49 @@
+Configure API on site and create api key for user
+
+Make sure to change “Results per Page” to a number equal to or greater to the number of items in the site (the script does not do paging)
+
+I haven’t turn the script into a gem yet so you will have to manually install dependencies. Go to the directory where you downloaded script and run:
+	‘gem install rest’
+	‘gem install recursive-open-struct’
+	’gem install json’
+
+Open irb from directory the script is downloaded in.
+
+From irb, type “load ‘~/omeka_export.rb’”
+
+Instantiate your client
+client = OmekaExport.new(“[site_url]/api”, “[api_key]”) 
+
+example: client = OmekaExport.new("http://migrationmemorials.trinity.duke.edu/api", "bcfa788c7aa95624510f461e380ceb5ba79b45b2")
+
+Get items
+items = client.items
+(returns all items in array and creates a csv file in same directory the script was run, named [site_name]_items.csv.
+
+Get collections
+collections = client.collections
+
+Get item_types
+item_types = client.item_types
+
+Get exhibits
+exhibits = client.exhibits
+
+Get geolocations
+geolocations = client.geolocations
+
+
+
+
+##Add new item_type to script
+
+add a new array name [item_type_name]_items to split_itemtype method and add corresponding elsif conditional and call to make csv method (about line 289)
+
+create a new method (that you refer to in the last part of the above directions) called create_[item_type_name]_csv (about line 612). Copy another csv method to reuse the dublin core metadata mapping, then add add the new item type metadata fields into the mapping by making changes or additions to the current item type metadata mapping.
+
+maybe
+
+go into content type that geolocations will be added to, manage display, and add the place location field to the left side of the page layout.
+
+
+
