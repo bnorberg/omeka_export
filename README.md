@@ -26,7 +26,7 @@ From irb, type “load ‘[path/to/file]/omeka_export.rb’”
 
 client = OmekaExport.new(“[site_url]/api”, “[api_key]”) 
 
-example: client = OmekaExport.new("https://migrationmemorials.trinity.duke.edu/api", "bcfa788c7aa95624510f461e380ceb5ba79b45b2")
+example: client = OmekaExport.new("https://[site.name.com]/api", "api key for user")
 
 ## Get items
 items = client.items
