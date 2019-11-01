@@ -9,8 +9,7 @@
 	- click the API Keys tab, give the key a label and hit the "Update API Keys" button
 
 I haven’t turned the script into a gem so you will have to manually install dependencies. Go to the directory where you downloaded script and run the below commands (the later two are only needed if the Omeka site uses the Geolocation plugin).
-
-# Commmands
+# 
 	- gem install rest
 	- gem install csv
 	- gem install recursive-open-struct
