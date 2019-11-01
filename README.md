@@ -8,7 +8,7 @@
 	- find user you want to give API access to (maybe use service account TTS) and edit the user's profile
 	- click the API Keys tab, give the key a label and hit the "Update API Keys" button
 
-I haven’t turned the script into a gem so you will have to manually install dependencies. Go to the directory where you downloaded script and run (the later two are only needed if the Omeka site uses the Geolocation plugin):
+# I haven’t turned the script into a gem so you will have to manually install dependencies. Go to the directory where you downloaded script and run (the later two are only needed if the Omeka site uses the Geolocation plugin):
 	- gem install rest
 	- gem install csv
 	- gem install recursive-open-struct
